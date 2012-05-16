@@ -5,7 +5,7 @@ Requires at least: 3.3
 Tested up to: 3.3.2
 Stable Tag: 1.0.1
 
-This plugin gives you the ability to call the 404.php template file or your own custom template file for specific paths where a user is not logged into WordPress and is not a specific role.
+This plugin gives you the ability to call the 404.php template file or your own custom template file for specific paths where a user is not logged in.
 
 == Description ==
 

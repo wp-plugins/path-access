@@ -2,7 +2,7 @@
 /*
 Plugin Name: Path Access
 Plugin URI: http://wordpress.org/extend/plugins/path-access/
-Description: This plugin gives you the ability to call the 404 template file on specific paths where a user is not logged into WordPress.
+Description: This plugin gives you the ability to call the 404.php template file or your own custom template file for specific paths where a user is not logged in.
 Version: 1.0.1
 Tags: members, access, path
 Author URI: http://kevindees.cc
