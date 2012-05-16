@@ -13,7 +13,7 @@ This plugin gives you the ability to call the 404.php template file or your own 
 
 To use Path Access look under the "Settings" menu.
 
-Your theme must have a 404.php file. However, if you want a more custom page you can create a file called access.php and users will be directed to that template instead, this template will set you HTTP Response to 403.
+Your theme must have a 404.php file. However, if you want a more custom page you can create a file called access.php and add it to your theme. Users will be directed to that template instead, the aceess.php template will set your HTTP Response to 403.
 
 In the User Interface, to restrict access to a page or child pages you must:
 
