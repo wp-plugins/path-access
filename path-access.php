@@ -3,7 +3,7 @@
 Plugin Name: Path Access
 Plugin URI: http://wordpress.org/extend/plugins/path-access/
 Description: This plugin gives you the ability to call the 404 template file on specific paths where a user is not logged into WordPress.
-Version: 1.0
+Version: 1.0.1
 Tags: members, access, path
 Author URI: http://kevindees.cc
 
@@ -107,7 +107,7 @@ class pathAccess {
 				<tr>
 					<td>
 						<h3 style="font-weight: bold;">Allow Access to Selected Roles</h3>
-						<p>The checked roles will have access to the above paths. Everyone other role and logged out user will not.</p>
+						<p>The checked roles will have access to the above paths. Every other role and logged out user will not.</p>
 						<?php $this->wp_select_roles( get_option('path_access_roles') ); ?>
 						<p class="submit">
 							<input type="submit" name="submit" class="button-primary" value="Save Changes" />
@@ -145,9 +145,11 @@ class pathAccess {
 
 			if($match  && !$isAdminPath && !$loggedIn || !$isAccessRole && !$isAdminPath && $match) :
 				if($fileAccess) :
+					header('HTTP/1.1 403 Forbidden');
 					load_template( TEMPLATEPATH . '/' . 'access.php');
 					die();
 				elseif($file404) :
+					header('HTTP/1.1 404 Not Found');
 					load_template( TEMPLATEPATH . '/' . '404.php');
 					die();
 				else :
